@@ -43,13 +43,13 @@ The composition of a Proof of Consumption is generic enough to capture and norma
 | July 11th  | YouTube  | Video  | View  | 1000  | $0.00007  | Subscription, Territory, Duration  |
 | July 12th  | iTunes Store  | Apps  | Download  | 10  | $0.70  | Territory  |
 
-#### Table 2.3.a: An example of Proofs of Consumption in the modern music industry
+##### Table 2.3.a: An example of Proofs of Consumption in the modern music industry
 
 ## 2.4 Sourcing
 Fetching Proof of Consumption transactions from its data sources can occur with the help of an oracle. From Off-Chain providers, the process might be straightforward sourcing it in the form of flat files and through API endpoints. However, the on-chain providers would need to leverage an on-chain oracle.
 
 ![Proof of Consumption](/proof_of_consumption_sourcing.PNG)
-#### Figure 2.4.a: Visualization of sourcing Proof of Consumption data from off-chain and on-chain providers
+##### Figure 2.4.a: Visualization of sourcing Proof of Consumption data from off-chain and on-chain providers
 
 # 3) Digital Asset Liquidity Protocol
 
@@ -92,7 +92,7 @@ The protocol ensures incentives for each of the actors for their participation i
 Supplier | Supplies Proofs of Consumption Payment remittance | Earn T<sub>NFXC</sub> for supplying data |
 Marketplace Oracle | Tokenizing assets | Order settlement | Earn T<sub>NFXC</sub> in transaction fees
 
-#### Table 3.1.2.a: The matrix showing different actors, their roles and their incentives using the Non-Fungible Liquidity Protocol
+##### Table 3.1.2.a: The matrix showing different actors, their roles and their incentives using the Non-Fungible Liquidity Protocol
 
 ## 3.3 Primary Market Liquidity 
 
@@ -107,7 +107,7 @@ In the example below, an Asset Owner (Seller) and a Buyer have negotiated and re
 * NFT is burned and the Liquidity Transaction is completed.
 
 ![Primary Market](/primary_market.PNG)
-#### Figure 2.3.1: Example of an order execution sequence between two peers.
+##### Figure 3.3.a: Example of an order execution sequence between two peers.
 
 ## 2.4 Secondary Markets
 
@@ -123,15 +123,15 @@ In the second scenario shown below, the initial Buyer decides to resell the NFT 
 * Funds are redirected to the Secondary Buyer.
 * NFT is burned and the Liquidity Transaction is completed.
 
-![Secondary Market](/primary_market.PNG)
-#### Figure 2: Example of an order execution sequence with a secondary buyer scenario.
+![Secondary Market](/secondary_market.PNG)
+##### Figure 3.4.a: Example of an order execution sequence with a secondary buyer scenario.
 
 # 4) Technical Design
 ## 4.1 Non-Fungible Exchange Contract
 The Non-Fungible Exchange Contract (NFXC) is the main smart contract that enables decentralized markets to be deployed on Ethereum. It is an extension of both the ERC-20 and the ERC-721 token contracts, where the ERC-20 token T<sub>NFXC</sub> is the economy used to trade and the ERC-721 token T<sub>NFT</sub> represents the temporary ownership of a collateralized Asset.
 
 ## 4.2 The Mechanics of the Contract
-### **orders[...]**
+### orders[...]
 An order is the atomic unit of trade in the market(s) created by NFXC. The Seller sells an order whereas the Buyer buys an order to assume ownership of receivable. An order has the following characteristics:
 
 * *orderId* - The unique index of the order 
@@ -190,16 +190,19 @@ Prior to remittance, Bob is free to re-sell his T<sub>NFT</sub>(O<sub>i</sub>) a
 
 | | Order state | Alice *(0xa1b2c30)* | Bob *(0xq1w2e3)* | Oracle *(0xz5x6c7)* |
 | -- | -- | -- | -- | -- |
-| Publish Order | *orderId* 1<br>*seller* 0xa1b2c30<br>*orderAmt* 9700<br>*chargeAmt* 50<br>*returnAmt* 250<br>*orderDate* July 1 ’18<br>*deadline* July 28 ’18<br>*remitDue* Sept 1 ’18<br>*status* Published | 0 T<sub>NFXC</sub> | 10,000 T<sub>NFXC</sub> | X T<sub>NFXC</sub><br><br>Where X is the token supply in Oracle’ reserve |
+| Publish Order | *orderId* 1<br>*seller* 0xa1b2c30<br>*orderAmt* 9700<br>*chargeAmt* 50<br>*returnAmt* 250<br>*orderDate* July 1 ’18<br>*deadline* July 28 ’18<br>*remitDue* Sept 1 ’18<br>*status* Published | 0 T<sub>NFXC</sub> | 10,000 T<sub>NFXC</sub> | X* T<sub>NFXC</sub> |
 | Fund Order | *status* Funded<br>*buyer* 0xq1w2e3 | + 9700 T<sub>NFXC</sub> | -  9700 T<sub>NFXC</sub><br>+ 1 T<sub>NFT</sub>(O1) | + 50 T<sub>NFXC</sub> |
 | Remit Order Payment | *status* Remitted | + 10,000 T<sub>NFXC</sub><br>-  1 T<sub>NFT</sub>(O1) | -  10,000 T<sub>NFXC</sub> |
 
-#### Table 4.2.a: Account state changes of an order’s lifecycle on the marketplace
+\* X is the token supply in Oracle’s reserve
+
+##### Table 4.2.a: Account state changes of an order’s lifecycle on the marketplace
 
 ## 4.3 Oracle API Specification
 One of the main functions of the Oracle is to bridge the gap between the off-chain dApp(s) and the on-chain contracts. Every order on the NFXC is tagged with a orderCorrelationId field, which can be used to fetch additional metadata from the Oracle’s publicly accessible API endpoint named getOrderMetadata(orderId)
-	
-#### Image 4.3.a: An example of a JSON output from the oracle API.
+
+![Order JSON](/order_json.png)
+##### Image 4.3.a: An example of a JSON output from the oracle API.
 
 # 5) Token Utility
 

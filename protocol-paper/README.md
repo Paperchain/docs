@@ -48,7 +48,7 @@ The composition of a Proof of Consumption is generic enough to capture and norma
 ## 2.4 Sourcing
 Fetching Proof of Consumption transactions from its data sources can occur with the help of an oracle. From Off-Chain providers, the process might be straightforward sourcing it in the form of flat files and through API endpoints. However, the on-chain providers would need to leverage an on-chain oracle.
 
-(/protocol-paper/proof_of_consumption_sourcing.PNG)
+![Proof of Consumption](/proof_of_consumption_sourcing.PNG)
 #### Figure 2.4.a: Visualization of sourcing Proof of Consumption data from off-chain and on-chain providers
 
 # 3) Digital Asset Liquidity Protocol
@@ -106,6 +106,7 @@ In the example below, an Asset Owner (Seller) and a Buyer have negotiated and re
 * Funds are redirected to the Buyer.
 * NFT is burned and the Liquidity Transaction is completed.
 
+![Primary Market](/primary_market.PNG)
 #### Figure 2.3.1: Example of an order execution sequence between two peers.
 
 ## 2.4 Secondary Markets
@@ -122,6 +123,7 @@ In the second scenario shown below, the initial Buyer decides to resell the NFT 
 * Funds are redirected to the Secondary Buyer.
 * NFT is burned and the Liquidity Transaction is completed.
 
+![Secondary Market](/primary_market.PNG)
 #### Figure 2: Example of an order execution sequence with a secondary buyer scenario.
 
 # 4) Technical Design

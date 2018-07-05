@@ -6,23 +6,32 @@
 .page-header {
     color: #fff;
     text-align: center;
-    background-color: #934fff;
-    background-image: linear-gradient(120deg, #6503ff, #934fff);
+    background-color: #6503ff;
+    background-image: linear-gradient(135deg, #6503ff, #934fff);
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: normal;
     color: #323144;
 }
 
+.main-content h1, .main-content h2, .main-content h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
 body{
-    font-family:Open Sans,sans-serif;
+    // font-family:Open Sans,sans-serif;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
     color:#4e4e66;
 }
 
 a {
     color: #6503ff;
     text-decoration: none;
+}
+
+@media screen and (min-width: 64em){
+    .main-content {
+        padding: 6rem 6rem;
+    }
 }

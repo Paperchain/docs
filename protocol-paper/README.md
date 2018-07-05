@@ -5,7 +5,8 @@ Daniel Dewar, Rahul Rumalla, David Tomaselli
 Version 0.3 June 27, 2018
 
 # Abstract
-Most digital assets are subjected to continuous or limitless consumption upon which economic payouts are calculated by Service Providers. The Digital Asset Liquidity Protocol (DALP) allows for tokenization of these proofs of consumption into Non-Fungible Assets for the purpose of achieving liquidity in a decentralized ecosystem. The protocol aims to build an open standard and a shared interface upon which marketplaces, exchanges, investors and sellers can exchange these tokenized Non-Fungible Assets. With a dual token model, the protocol allows peers in a decentralized network to trade a Non-Fungible Asset-Backed Token (T<sub>NFT</sub>) that represent the Proofs of Consumption as Non-Fungible Asset(s) in exchange for its notional value in economy tokens (T<sub>NFXC</sub>). Upon the creation of the Non-Fungible Token, T<sub>NFT</sub>, it can be either be held until the payment remittance event from the Service Provider or traded in the marketplace in exchange for faster liquidity. What the internet did for information blockchains do for transactions, consequently making an individual transaction a Proof of Information event on the internet. This is the philosophy that drives DALP to capture digital media asset Proofs of Consumption to create a transparent network of media monetization and faster liquidity.
+
+Most digital assets are subjected to continuous or limitless consumption upon which economic payouts are calculated by Service Providers. The **Digital Asset Liquidity Protocol (DALP)** allows for tokenization of these proofs of consumption into Non-Fungible Assets for the purpose of achieving liquidity in a decentralized ecosystem. The protocol aims to build an open standard and a shared interface upon which marketplaces, exchanges, investors and sellers can exchange these tokenized Non-Fungible Assets. With a dual token model, the protocol allows peers in a decentralized network to trade a Non-Fungible Asset-Backed Token (T<sub>NFT</sub>) that represent the Proofs of Consumption as Non-Fungible Asset(s) in exchange for its notional value in economy tokens (T<sub>NFXC</sub>). Upon the creation of the Non-Fungible Token, T<sub>NFT</sub>, it can be either be held until the payment remittance event from the Service Provider or traded in the marketplace in exchange for faster liquidity. What the internet did for information blockchains do for transactions, consequently making an individual transaction a Proof of Information event on the internet. This is the philosophy that drives DALP to capture digital media asset Proofs of Consumption to create a transparent network of media monetization and faster liquidity.
 
 # 1. Introduction
 
@@ -201,7 +202,19 @@ Prior to remittance, Bob is free to re-sell his T<sub>NFT</sub>(O<sub>i</sub>) a
 ## 4.3 Oracle API Specification
 One of the main functions of the Oracle is to bridge the gap between the off-chain dApp(s) and the on-chain contracts. Every order on the NFXC is tagged with a orderCorrelationId field, which can be used to fetch additional metadata from the Oracle’s publicly accessible API endpoint named getOrderMetadata(orderId)
 
-![Order JSON](/order_json.png)
+```json
+{
+  "orderId": 123,
+  "proofOfConsumptionIds": [
+    1,
+    2,
+    3
+  ],
+  "orderCorrelationId": 34001,
+  "createdAt": "2006-01-02 12:13:14",
+  "createdBy": "0x123k89as8a855f55a66677778aa99900a1"
+}
+```
 ##### Image 4.3.a: An example of a JSON output from the oracle API.
 
 # 5) Token Utility

@@ -1,5 +1,4 @@
-# Paperchain Resources
-Welcome to Paperchain's public resources. 
+# Paperchain Docs
+Find all public documentation created by Paperchain here. 
 
 * [Protocol Whitepaper](/protocol-paper)
-* [Paperchain Website](https://paperchain.io)

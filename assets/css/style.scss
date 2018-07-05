@@ -7,7 +7,7 @@
     color: #fff;
     text-align: center;
     background-color: #6503ff;
-    background-image: linear-gradient(135deg, #6503ff, #934fff);
+    background-image: linear-gradient(135deg, #6503ff, #6503ff);
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
@@ -16,7 +16,28 @@
 
 .main-content h1, .main-content h2, .main-content h3 {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+.main-content p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+@media screen and (min-width: 64em) {
+    .project-name {
+        font-size: 3.25rem;
+        padding-bottom: 3rem;
+    }
+
+    .main-content {
+        max-width: 52em;
+    }
+}
+
+.main-content table {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 body{

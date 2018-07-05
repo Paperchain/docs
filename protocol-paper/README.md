@@ -56,8 +56,8 @@ Fetching Proof of Consumption transactions from its data sources can occur with 
 
 The Digital Asset Liquidity Protocol (DALP) enables tokenization of Proofs of Consumption into Non-Fungible Assets in order to achieve liquidity in a decentralized network. The assets are represented by a Non-Fungible Token (NFT), enabling peer-to-peer exchange. Through this protocol, Service Providers are able to tokenize their usage transactions into NFTs while also transparently accounting for the associated monetary payouts to the Content Owners. Content Owners have the ability to hold on to the NFT until the eventual payment remittance or use a Liquidity Marketplace to trade for faster liquidity. The protocol proposes a dual token model.
 
-T<sub>NFT</sub> - An ERC-721 token to represent the Non-Fungible Asset(s) that are the Proofs of Consumption
-T<sub>NFXC</sub> - An ERC-20 token that is the notional value of the Non-Fungible Asset(s)
+**T<sub>NFT</sub>** - An ERC-721 token to represent the Non-Fungible Asset(s) that are the Proofs of Consumption
+**T<sub>NFXC</sub>** - An ERC-20 token that is the notional value of the Non-Fungible Asset(s)
 
 While the main purpose of the TNFT is to facilitate the issuance of an IOU and to capture the ownership of the asset, T<sub>NFXC</sub> is the Non-Fungible Exchange Token i.e., an economy token for purpose of trade.
 
@@ -110,7 +110,7 @@ In the example below, an Asset Owner (Seller) and a Buyer have negotiated and re
 ![Primary Market](/primary_market.PNG)
 ##### Figure 3.3.a: Example of an order execution sequence between two peers.
 
-## 2.4 Secondary Markets
+## 3.4 Secondary Markets
 
 In the second scenario shown below, the initial Buyer decides to resell the NFT on a secondary market, causing adjustment in ownership and IOU remittance. In a good Secondary Market scenario, the process is slightly altered:
 

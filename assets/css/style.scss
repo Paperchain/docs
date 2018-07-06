@@ -19,9 +19,28 @@
     margin-bottom: 2rem;
 }
 
+.main-content h5 {
+    font-size:14px;
+    text-align:center;
+}
+
 .main-content p {
-    line-height: 1.7;
+    line-height: 1.9;
     text-align: justify;
+    font-size: 19px;
+}
+
+.main-content ul {
+  font-size: 19px;
+  line-height:  1.9;
+  text-align: justify;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.main-content li {
+  margin-bottom:10px;
+  margin-top:10px;
 }
 
 @media screen and (min-width: 64em) {
@@ -31,7 +50,7 @@
     }
 
     .main-content {
-        max-width: 52em;
+        max-width: 48em;
     }
 }
 
@@ -42,7 +61,7 @@
 
 body{
     // font-family:Open Sans,sans-serif;
-    font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     color:#4e4e66;
 }
 

@@ -20,7 +20,7 @@ The massive consumer shift to digital media consumption has transformed the medi
 
 ## 2.1 Continuous Model
 
-The Continuous Model assumes there is a continuous payout system that is proportional to the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher monetization. 
+The Continuous Model assumes there is a continuous payout system that is proportional to the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher monetization.
 
 ## 2.2 Fixed Model
 
@@ -30,7 +30,7 @@ In the Fixed Model, content is under a fixed monetization contract with a Servic
 
 The composition of a Proof of Consumption is generic enough to capture and normalize the transactions coming in from a source provider. The structure of its unit being represented as follows:
 
-* Source 
+* Source
 * Period (Start / End)
 * Asset Type
 * Metric Type
@@ -74,17 +74,17 @@ In decentralization models where centralized authorities are disintermediated, i
 * Asset Owners
 * Buyers
 
-The Proofs of Consumption are packaged and delivered by the Service Providers. 
+The Proofs of Consumption are packaged and delivered by the Service Providers.
 
-An *Oracle* is essentially a dApp responsible for tokenization and liquidation of the assets while also issuing new NFTs. 
+An *Oracle* is essentially a dApp responsible for tokenization and liquidation of the assets while also issuing new NFTs.
 
-*Asset Owners* are identified as the actors that own the content and their tokenized Proofs of Consumption i.e., the Non-Fungible Assets. 
+*Asset Owners* are identified as the actors that own the content and their tokenized Proofs of Consumption i.e., the Non-Fungible Assets.
 
-A *Buyer* participates in the Liquidity Marketplace to assume temporary ownership of the NFT in exchange for faster and perhaps discounted liquidity. 
+A *Buyer* participates in the Liquidity Marketplace to assume temporary ownership of the NFT in exchange for faster and perhaps discounted liquidity.
 
 ### 3.1.2 Marketplace Incentive Matrix
 
-The protocol ensures incentives for each of the actors for their participation in the Liquidity Marketplace. To better present this, the following matrix defines the incentive structure: 
+The protocol ensures incentives for each of the actors for their participation in the Liquidity Marketplace. To better present this, the following matrix defines the incentive structure:
 
 | | Network Value Add | Incentive |
 |---|---|---|
@@ -95,7 +95,7 @@ Marketplace Oracle | Tokenizing assets | Order settlement | Earn T<sub>NFXC</sub
 
 ##### Table 3.1.2.a: The matrix showing different actors, their roles and their incentives using the Non-Fungible Liquidity Protocol
 
-## 3.3 Primary Market Liquidity 
+## 3.3 Primary Market Liquidity
 
 In the example below, an Asset Owner (Seller) and a Buyer have negotiated and reached agreement to trade an order representing the tokenized Non-Fungible Assets which are the Proofs of Consumptions from a Service Provider. The Exchange Contract is an Ethereum smart contract that executes the functions. The general process is:
 
@@ -124,7 +124,7 @@ In the second scenario shown below, the initial Buyer decides to resell the NFT 
 * Funds are redirected to the Secondary Buyer.
 * NFT is burned and the Liquidity Transaction is completed.
 
-![Secondary Market](/secondary_market.PNG)
+![Secondary Market](/dalp_nft_secondary_market.png)
 ##### Figure 3.4.a: Example of an order execution sequence with a secondary buyer scenario.
 
 # 4) Technical Design
@@ -135,7 +135,7 @@ The Non-Fungible Exchange Contract (NFXC) is the main smart contract that enable
 ### orders[...]
 An order is the atomic unit of trade in the market(s) created by NFXC. The Seller sells an order whereas the Buyer buys an order to assume ownership of receivable. An order has the following characteristics:
 
-* *orderId* - The unique index of the order 
+* *orderId* - The unique index of the order
 * *orderAmount* - The value of the order represented in T<sub>NFXC</sub> ( ERC-223 tokens )
 * *chargeAmount* - *The fraction of the total amount which the Market charges as a charge fee
 * *returnAmount* - The fraction of the total amount which the Buyer makes as a return
@@ -150,7 +150,7 @@ The order status indicates the stage of the order lifecycle
   * *Remitted* when the order amount is remitted by the Oracle
   * *Expired* when the order was not funded by the desired deadline
   * *Cancelled* when the published but non-funded order was cancelled by the seller
-* *oracleCorrelationId* - Set by the Oracle to uniquely identify the order. The buyer would be able to verify the uniqueness using the oracle’s off-chain systems using the pre-configured API endpoint. 
+* *oracleCorrelationId* - Set by the Oracle to uniquely identify the order. The buyer would be able to verify the uniqueness using the oracle’s off-chain systems using the pre-configured API endpoint.
 
 ### deployMarket(name, address, chargePart, oracleEndpoint)
 
@@ -165,17 +165,17 @@ When a market is deployed using the NFXC, it needs to be supplied with the param
 
 Alice is the seller that publishes an order with token amount 10,000 T<sub>NFXC</sub> on July 1st 2018, for which she is hoping to receive funding by the deadline July 28th 2018. She indicates that she expects the buyer, Bob, would receive his funds by the expected remittance due date September 1st 2018.
 
-When Alice published the order of 10,000 T<sub>NFXC</sub>, the T<sub>NFXC</sub> splits Alice’s order into 3 parts using Oracle configuration variables: 
+When Alice published the order of 10,000 T<sub>NFXC</sub>, the T<sub>NFXC</sub> splits Alice’s order into 3 parts using Oracle configuration variables:
 
 * Charge amount of 50 T<sub>NFXC</sub> ( 0.5% of 10,000 set by Oracle during deployment )
 * Return amount of 250 T<sub>NFXC</sub> ( 2.5% of 10,000 set by Oracle during deployment )
 * Order amount of 9,700 T<sub>NFXC</sub> ( Original amount - ( Charge + Return ) )
 
-Should the order be funded, Alice receives 97% of the original posted amount. 
+Should the order be funded, Alice receives 97% of the original posted amount.
 
 ### fundOrder(buyer, orderId)
 
-The buyer, Bob, sees Alice’s order indicated with its orderId on the marketplace and likes the fact that he can make 2.5% return by the expected remittance due date and he is happy to take that risk for a short term return. 
+The buyer, Bob, sees Alice’s order indicated with its orderId on the marketplace and likes the fact that he can make 2.5% return by the expected remittance due date and he is happy to take that risk for a short term return.
 
 When Bob funds the order, Bob’s wallet has now been debited with 9750 ERC-223 token T<sub>NFXC</sub> and credited with 1 newly minted ERC-721 token T<sub>NFT</sub>. The T<sub>NFT</sub> is the ERC-721 token that is tied to the order that is indicative of Bob’s ownership of the order. The T<sub>NFXC</sub>(O<sub>i</sub>) is the IOU from Alice to Bob.
 
@@ -185,9 +185,9 @@ From the 9750 T<sub>NFXC</sub>, 50 T<sub>NFXC</sub> is transferred to Oracle’s
 
 Oracle and/or Service Provider will be authorized off-chain, by the seller Alice, to remit funds to Bob when her funds become available by the previously mentioned remittance due date.
 
-10,000 T<sub>NFXC</sub> are transferred from the Service Provider to Bob’s wallet. Bob, now having received the funds, has made a return of 250 T<sub>NFXC</sub> i.e., 2.5% of the 10,000 T<sub>NFXC</sub>. The associated NFT with the order i.e., T<sub>NFT</sub>(O<sub>i</sub>) is then burned. This relieves Bob of the ownership and the IOU is considered as settled. 
+10,000 T<sub>NFXC</sub> are transferred from the Service Provider to Bob’s wallet. Bob, now having received the funds, has made a return of 250 T<sub>NFXC</sub> i.e., 2.5% of the 10,000 T<sub>NFXC</sub>. The associated NFT with the order i.e., T<sub>NFT</sub>(O<sub>i</sub>) is then burned. This relieves Bob of the ownership and the IOU is considered as settled.
 
-Prior to remittance, Bob is free to re-sell his T<sub>NFT</sub>(O<sub>i</sub>) and transfer his ownership to another buyer. If this is the case, the Oracle will remit the payment to the current owner of the T<sub>NFT</sub>(O<sub>i</sub>). 
+Prior to remittance, Bob is free to re-sell his T<sub>NFT</sub>(O<sub>i</sub>) and transfer his ownership to another buyer. If this is the case, the Oracle will remit the payment to the current owner of the T<sub>NFT</sub>(O<sub>i</sub>).
 
 | | Order state | Alice *(0xa1b2c30)* | Bob *(0xq1w2e3)* | Oracle *(0xz5x6c7)* |
 | -- | -- | -- | -- | -- |
@@ -223,10 +223,10 @@ The exchange token T<sub>NFXC</sub> is a multi-purpose ERC-20 token that allows 
 
 * All economic incentives in the network are paid out in T<sub>NFXC</sub>
 * Price locking features for Orders on the Liquidity Marketplace. ( a % is dedicated to a stability fund that will be used to offset the order at the time of liquidity event(s) to protect the seller from volatility if needed). Here, the idea of 'stability' is a Token Engineering characteristic more than an entire protocol.
-* Similar to a credit score, a reputation score is tied to wallet addresses with token transaction history. For example, a good reputation score can lower risk fees. 
-* For any programmatic trading on the network, a staked pool can help gain priority for competing orders. 
+* Similar to a credit score, a reputation score is tied to wallet addresses with token transaction history. For example, a good reputation score can lower risk fees.
+* For any programmatic trading on the network, a staked pool can help gain priority for competing orders.
 
-A custom token in general allows for decoupling from the parent community (like Ethereum), opening up many more possibilities like customized contributions, reward mechanism and implementing governance structures where or when necessary. 
+A custom token in general allows for decoupling from the parent community (like Ethereum), opening up many more possibilities like customized contributions, reward mechanism and implementing governance structures where or when necessary.
 
 # 6) NFXC Configuration and Extensibility
 
@@ -236,7 +236,7 @@ While the contract mechanism outlined so far is in a simplistic form, the standa
 * For larger valued orders, facilitation of funding via buyer pools where buyers’ return staked to their contribution allowing them to spread their risk
 * Creating market conditions and incentivization to open up asset price discovery to multiple service registries
 * Configuring the market or a deal to incur a maturity interest rate, that is tied directly to the NFT, in scenarios where remittance payback is delayed beyond the expected date. This can be applied to models like advances and interest bearing loans.
-* This standard also allows for models implementing a speculative aspect on the futures of seller’s assets, thereby creating higher volatility and healthier liquidity on the platform - a zero sum speculative market allowing for higher returns for investors applying their industry and market expertise 
+* This standard also allows for models implementing a speculative aspect on the futures of seller’s assets, thereby creating higher volatility and healthier liquidity on the platform - a zero sum speculative market allowing for higher returns for investors applying their industry and market expertise
 * Prediction markets can be tied to the performance of the asset over time
 * Incentivising Oracles to connect zero knowledge proof protocols to ascertain transaction data quality, as well as initiate price discovery modelling for data flows
 

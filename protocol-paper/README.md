@@ -6,13 +6,13 @@ Version 0.3 June 27, 2018
 
 # Abstract
 
-Most digital assets are subjected to continuous or limitless consumption upon which economic payouts are calculated by Service Providers. The **Digital Asset Liquidity Protocol (DALP)** allows for tokenization of these proofs of consumption into Non-Fungible Assets for the purpose of achieving liquidity in a decentralized ecosystem. The protocol aims to build an open standard and a shared interface upon which marketplaces, exchanges, investors and sellers can exchange these tokenized Non-Fungible Assets. With a dual token model, the protocol allows peers in a decentralized network to trade a Non-Fungible Asset-Backed Token (T<sub>NFT</sub>) that represent the Proofs of Consumption as Non-Fungible Asset(s) in exchange for its notional value in economy tokens (T<sub>NFXC</sub>). Upon the creation of the Non-Fungible Token, T<sub>NFT</sub>, it can be either be held until the payment remittance event from the Service Provider or traded in the marketplace in exchange for faster liquidity. What the internet did for information blockchains do for transactions, consequently making an individual transaction a Proof of Information event on the internet. This is the philosophy that drives DALP to capture digital media asset Proofs of Consumption to create a transparent network of media monetization and faster liquidity.
+Most digital assets are subjected to continuous or limitless consumption upon which economic payouts are calculated by Service Providers. The **Digital Asset Liquidity Protocol (DALP)** allows for tokenization of these proofs of consumption into Non-Fungible Assets for the purpose of achieving liquidity in a decentralized ecosystem. The protocol aims to build an open standard and a shared interface upon which marketplaces, exchanges, investors and sellers can exchange these tokenized Non-Fungible Assets. With a dual token model, the protocol allows peers in a decentralized network to trade a Non-Fungible Asset-Backed Token (T<sub>NFT</sub>) that represent the Proofs of Consumption as Non-Fungible Asset(s) in exchange for its notional value in economy tokens (T<sub>NFXC</sub>). Upon the creation of the Non-Fungible Token, T<sub>NFT</sub>, it can be either be held until the payment remittance event from the Service Provider or traded in the marketplace in exchange for faster liquidity. What the internet did for information, blockchains do for transactions, transforming an individual transaction into a Proof of Information event on the internet. This is the philosophy that drives adoption of the DALP. By capturing digital media asset transactions as tokenized Proofs of Consumption, market participants create a transparent network to trade media assets, accelerating liquidity and increasing profitability through more efficient deployment of capital.
 
 # 1. Introduction
 
-Traditionally, high-yield assets accrue value over a long period of time for investors, generally meaning that the asset-holders are unable to quickly capitalize on the value of their position. These traditional financial assets also have the challenge of illiquidity—they cannot be easily bought and sold, which creates capital freeze for holders.
+Traditionally, high-yield assets accrue value over a long period of time for investors, generally meaning that the asset-holders are unable to quickly capitalize on the value of their position. These traditional financial assets also have the challenge of illiquidity—they cannot be easily bought and sold, locking up asset owners' capital.
 
-This challenge is doubly extended to non-fungible assets that have never historically had investment markets available to them due to the asset nature. Some examples of high-yield accrual based non-fungible assets can be licenses, copyrights, patents, and loans.
+This challenge is doubly extended to non-fungible assets that historically have never had access to efficient markets due to challenges arising from their non-fungible nature. The DALP overcomes these challenges by facilitating the creation of orderly, decentralized and efficient markets for non-fungible assets. High-yield non-fungible assets to be traded on these new markets include licenses, copyrights, patents, accounts receivable and other financial instruments.
 
 # 2. Proof of Consumption
 
@@ -20,11 +20,11 @@ The massive consumer shift to digital media consumption has transformed the medi
 
 ## 2.1 Continuous Model
 
-The Continuous Model assumes there is a continuous payout system that is proportional to the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher monetization.
+The Continuous Model assumes there is a continuous payout system that is a function of the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher monetization.
 
 ## 2.2 Fixed Model
 
-In the Fixed Model, content is under a fixed monetization contract with a Service Provider, which does not take into account the individual consumption transactions. For example, video content licenses on Netflix are subject to a fixed compensation over a fixed period of time, regardless of how many views the content gets. In this model, the Proof of Consumption could be the contract or the license itself.
+In the Fixed Model, content is under a fixed monetization contract with a Service Provider, which does not take into account the individual consumption transactions. For example, video content licenses on Netflix are subject to a fixed compensation over a fixed period of time, regardless of how many views the content gets. In this model, the Proof of Consumption could be rights under the contract license for a specific billing period under that contract of license.
 
 ## 2.3 Structure
 
@@ -119,7 +119,7 @@ In the second scenario shown below, the initial Buyer decides to resell the NFT 
 * Seller receives funds.
 * Buyer assumes ownership of NFT as an IOU.
 * Buyer and Secondary Buyer reach agreement on re-sale of NFT.
-* Secondary Buyer funds are transferred to Buyer, along with the NFT.
+* Secondary Buyer funds are transferred to Buyer, in exchange for transfer of the NFT to the Secondary Buyer.
 * In due time, remittance payment is made by the Service Provider.
 * Funds are redirected to the Secondary Buyer.
 * NFT is burned and the Liquidity Transaction is completed.

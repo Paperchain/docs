@@ -62,15 +62,15 @@ While the main purpose of the T<sub>NFT</sub> is to facilitate the issuance of a
 ## 3.1 Liquidity Network
 The Liquidity Network in the implementation of the Digital Asset Liquidity Protocol where different agents participate in the execution of a trade in exchange for pre-programmed network incentives. 
 
-### 3.1.2 Makers
+### 3.1.1 Makers
 *Makers* are identified as the network agents that own the digital assets and their Proofs of Consumption. It is the Maker that first publishes the intent for trade in exchange for liquidity on the network. 
 
 With the assistance of the relayer, Makers set the various terms for placing a Liquidity Order. 
 
-### 3.1.3 Takers
+### 3.1.2 Takers
 *Takers* are the agents that are responsibile for supplying liquidity in the network. They fill orders published by the makers and assume the temporary ownership of the Non-Fungible Tokens i.e., the Liqudity Tokens. Takers' incentives are in making a return on the investment for providing liquidity on a published order. 
 
-### 3.1.1 Suppliers
+### 3.1.3 Suppliers
 The *Suppliers* are the network agents responsible for delivering Proofs of Consumption data sets into the Liquidity Network. They are typically the service providers of the Makers, with whom they have a Service Level Agreement(SLA) that includes two main responsibilities
 1. Periodic economic payouts to Makers for ongoing consumption of their Assets
 2. Delivering the Proofs of Consumption on behalf of the Maker
@@ -80,7 +80,7 @@ The delivery of Proofs of Consumption is dependent on whether the supplier is an
 Suppliers are incentivized (one-time) for their participation in the Liqudity Network by delivering the Proofs of Consumption. 
 
 ![Proof of Consumption](/proof_of_consumption_sourcing.PNG)
-##### Figure 3.1.1.a: Visualization of sourcing Proofs of Consumption from off-chain and on-chain suppliers
+##### Figure 3.1.3.a: Visualization of sourcing Proofs of Consumption from off-chain and on-chain suppliers
 
 Suppliers are the *trusted* entities that deliver the eventual remittance to the owner of the Non-Fungible Asset i.e., the Proofs of Consumption on behalf of the Maker.
 

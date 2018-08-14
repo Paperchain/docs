@@ -10,9 +10,9 @@ Most digital assets are subjected to continuous or limitless consumption, upon w
 
 # 1. Introduction
 
-Traditionally, high-yield assets accrue value over a long period of time for investors, generally meaning that the asset-holders are unable to quickly capitalize on the value of their position. These traditional assets also have the challenge of illiquidity — they cannot be easily traded, which creates a "capital freeze" for holders.
+Traditionally, high-yield assets accrue value over a long period of time for investors, generally meaning that the asset-holders are unable to quickly capitalize on the value of their position. These traditional assets also have the challenge of illiquidity — they cannot be easily traded, locking up asset owners' capital.
 
-This challenge is doubly extended to non-fungible assets that have never historically had investment markets available to them due to the asset nature. Some examples of high-yield accrual based non-fungible assets can be invoices, licenses, copyrights, patents and loans.
+This challenge is doubly extended to non-fungible assets that historically have never had access to efficient markets due to challenges arising from their non-fungible nature. The DALP overcomes these challenges by facilitating the creation of orderly, decentralized and efficient markets for non-fungible assets. High-yield non-fungible assets to be traded on these new markets include licenses, copyrights, patents, accounts receivable and other financial instruments.
 
 # 2. Proof of Consumption
 
@@ -22,7 +22,7 @@ The massive consumer shift to digital media consumption has transformed the medi
 
 ## 2.1 Continuous Incentive Model
 
-The Continuous Incentive Model assumes that the incentives are proportional to the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher incentives. 
+The Continuous Incentive Model assumes that the incentives paid out are a function of the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher incentives. 
 
 ## 2.2 Fixed Incentive Model
 
@@ -126,7 +126,7 @@ In the second scenario shown below, the initial Taker decides to resell the NFT 
 * Maker receives funds.
 * Taker assumes ownership of NFT as an IOU.
 * Taker and Secondary Taker reach agreement on re-sale of NFT.
-* Secondary Taker funds are transferred to Taker, along with the NFT.
+* Secondary Taker funds are transferred to Buyer, in exchange for transfer of the NFT to the Secondary Buyer.
 * In due time, remittance payment is made by the Service Provider.
 * Funds are redirected to the Secondary Taker.
 * NFT is burned and the Liquidity Transaction is completed.

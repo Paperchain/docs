@@ -3,7 +3,11 @@
 
 Rahul Rumalla, David Tomaselli, & Daniel Dewar
 
-Version 0.4 August 14th, 2018
+Version 0.4 August 14, 2018
+
+<small>First published April 07, 2018</small>
+
+[PDF Version - English](http://127.0.0.1:4000/assets/papers/2018-paperchain-digital-asset-liquidity-protocol.pdf)
 
 ## Abstract
 
@@ -106,7 +110,7 @@ The Digital Asset Liquidity Protocol (DALP) enables tokenization of Proofs of Co
 
 While the main purpose of the T<sub>NFT</sub> is to facilitate the issuance of an IOU and to capture the ownership of the asset, T<sub>NFXC</sub> is the Non-Fungible Exchange Token i.e., an economy token for purpose of trade. All incentives of the network are paid out in T<sub>NFXC</sub>. All services and products built with the protocol can be accessed using T<sub>NFXC</sub>.
 
-##3 3.1 Liquidity Network
+### 3.1 Liquidity Network
 The Liquidity Network in the implementation of the Digital Asset Liquidity Protocol where different agents participate in the execution of a trade in exchange for pre-programmed network incentives.
 
 #### 3.1.1 Makers

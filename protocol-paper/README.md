@@ -7,7 +7,7 @@ Version 0.4 August 14, 2018
 
 <small>First published April 07, 2018</small>
 
-[PDF Version - English](http://127.0.0.1:4000/assets/papers/2018-paperchain-digital-asset-liquidity-protocol.pdf)
+[PDF Version - English](https://resources.paperchain.io/assets/papers/2018-paperchain-digital-asset-liquidity-protocol.pdf)
 
 ## Abstract
 

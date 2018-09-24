@@ -106,7 +106,7 @@ The composition of a Proof of Consumption is a highly generic model. Various dat
 The Digital Asset Liquidity Protocol (DALP) enables tokenization of Proofs of Consumption into Non-Fungible Assets in order to achieve liquidity in a decentralized network. The assets are represented by a Non-Fungible Token (NFT), enabling peer-to-peer exchange. Through this protocol, Service Providers are able to tokenize their transactions data sets into NFTs while also transparently accounting for the associated incentives to the asset-holders. Investors have the ability to hold on to the NFT until the eventual payment remittance or use a Liquidity Marketplace to trade for faster liquidity. The protocol proposes a dual token model.
 
 **T<sub>NFT</sub>** - An EIP721 based non-fungible token to represent the Non-Fungible Asset(s) that are the Proofs of Consumption
-**T<sub>NFXC</sub>** - An EIP20 based economy token that is the notional value of the Non-Fungible Asset(s)
+<br>**T<sub>NFXC</sub>** - An EIP20 based economy token that is the notional value of the Non-Fungible Asset(s)
 
 While the main purpose of the T<sub>NFT</sub> is to facilitate the issuance of an IOU and to capture the ownership of the asset, T<sub>NFXC</sub> is the Non-Fungible Exchange Token i.e., an economy token for purpose of trade. All incentives of the network are paid out in T<sub>NFXC</sub>. All services and products built with the protocol can be accessed using T<sub>NFXC</sub>.
 

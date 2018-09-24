@@ -1,34 +1,35 @@
 
 # Digital Asset Liquidity Protocol
 
-Rahul Rumalla & Daniel Dewar
+Rahul Rumalla, Dave Tomaselli, & Daniel Dewar
+
 Version 0.4 August 14th, 2018
 
-# Abstract
+## Abstract
 
 Most digital assets are subjected to continuous or limitless consumption, upon which relative economic incentives are distributed to the asset owners. The transaction data representing the asset consumption is the core proof of the eventual payout. The **Digital Asset Liquidity Protocol** (DALP) allows for tokenization of these proofs of consumption into Non-Fungible Assets for the purpose of achieving liquidity on a decentralized exchange (DEX). The protocol aims to build an open standard and a shared interface upon which marketplaces, exchanges, investors and makers can exchange these tokenized Non-Fungible Assets. With a dual token model, the protocol allows peers to trade a Non-Fungible Asset-Backed Token (T<sub>NFT</sub>) that represent the collateralized Proofs of Consumption as Non-Fungible Asset(s) in exchange for its notional value in economy or utility tokens (T<sub>NFXC</sub>). Upon the creation of the Non-Fungible Token, T<sub>NFT</sub>, it can be either be held by the counterparty until the repayment remittance or re-traded for faster liquidity. The protocol's main objective is to enable immediate liquidity upon a record of the asset's Proof of Consumption on the network.
 
-# 1) Introduction
+## 1) Introduction
 
 Traditionally, high-yield assets accrue value over a long period of time for investors, generally meaning that the asset-holders are unable to quickly capitalize on the value of their position. These traditional assets also have the challenge of illiquidity — they cannot be easily traded, locking up asset owners’ capital.
 
 This challenge is doubly extended to non-fungible assets that historically have never had access to efficient markets due to challenges arising from their non-fungible nature. The DALP overcomes these challenges by facilitating the creation of orderly, decentralized and efficient markets for non-fungible assets. High-yield non-fungible assets to be traded on these new markets include licenses, copyrights, patents, accounts receivable and other financial instruments.
 
-# 2) Proof of Consumption
+## 2) Proof of Consumption
 
 Any consumption event on an asset that results in an economic incentive (fiat or otherwise) to the asset owner is considered as a Proof of Consumption.
 
 The massive consumer shift to digital media consumption has transformed the media industry from a manual, physical, product-based business to a digital, transaction-based business with a drastically narrowed bottom-line. However, the media content’s transaction data, which can be streams on Spotify, views on YouTube, downloads on the App Store, spins on a Radio Station, or impressions of an Advertisement, are all available in near real-time but go largely unutilized in support of core business processes, in particular liquidity. These transactions are Proofs of Consumption that can be tokenized into Non-Fungible Assets in exchange for liquidity in a decentralized eco-system. Proof of Consumption may be categorized into 2 different incentive models, distinguished by how the transactions are converted to incentives.
 
-## 2.1 Continuous Incentive Model
+### 2.1 Continuous Incentive Model
 
 The Continuous Incentive Model assumes that the incentives paid out are a function of the quantity of Proof of Consumption transactions. This model can be applied to the payout system of Service Providers like YouTube, Spotify or iTunes App Store where more streams, views or downloads would result in higher incentives.
 
-## 2.2 Fixed Incentive Model
+### 2.2 Fixed Incentive Model
 
 In the Fixed Incentive Model, a digital asset is under a fixed monetization contract with a Service Provider, which does not take into account the individual consumption transactions. For example, video content licenses on Netflix are subject to a fixed compensation over a fixed period of time, regardless of how many views the content gets. In this model, the Proof of Consumption is either the contract or the license itself.
 
-## 2.3 Structure
+### 2.3 Structure
 
 The composition of a Proof of Consumption is a highly generic model. Various data compositions from different source providers are normalized so that they can be denoted with a notional value. The structure of a Proof of Consumption is as follows:
 
@@ -96,7 +97,7 @@ The composition of a Proof of Consumption is a highly generic model. Various dat
 
 ##### Table 2.3.a: An example of Proofs of Consumption in the modern music industry
 
-# 3) Digital Asset Liquidity Protocol
+## 3) Digital Asset Liquidity Protocol
 
 The Digital Asset Liquidity Protocol (DALP) enables tokenization of Proofs of Consumption into Non-Fungible Assets in order to achieve liquidity in a decentralized network. The assets are represented by a Non-Fungible Token (NFT), enabling peer-to-peer exchange. Through this protocol, Service Providers are able to tokenize their transactions data sets into NFTs while also transparently accounting for the associated incentives to the asset-holders. Investors have the ability to hold on to the NFT until the eventual payment remittance or use a Liquidity Marketplace to trade for faster liquidity. The protocol proposes a dual token model.
 
@@ -105,18 +106,18 @@ The Digital Asset Liquidity Protocol (DALP) enables tokenization of Proofs of Co
 
 While the main purpose of the T<sub>NFT</sub> is to facilitate the issuance of an IOU and to capture the ownership of the asset, T<sub>NFXC</sub> is the Non-Fungible Exchange Token i.e., an economy token for purpose of trade. All incentives of the network are paid out in T<sub>NFXC</sub>. All services and products built with the protocol can be accessed using T<sub>NFXC</sub>.
 
-## 3.1 Liquidity Network
+##3 3.1 Liquidity Network
 The Liquidity Network in the implementation of the Digital Asset Liquidity Protocol where different agents participate in the execution of a trade in exchange for pre-programmed network incentives.
 
-### 3.1.1 Makers
+#### 3.1.1 Makers
 *Makers* are identified as the network agents that own the digital assets and their Proofs of Consumption. It is the Maker that first publishes the intent for trade in exchange for liquidity on the network.
 
 With the assistance of the relayer, Makers set the various terms for placing a Liquidity Order.
 
-### 3.1.2 Takers
+#### 3.1.2 Takers
 *Takers* are the agents that are responsible for supplying liquidity in the network. They fill orders published by the makers and assume the temporary ownership of the Non-Fungible Tokens i.e., the Liquidity Tokens. Takers’ incentives are in making a return on the investment for providing liquidity on a published order.
 
-### 3.1.3 Suppliers
+#### 3.1.3 Suppliers
 The *Suppliers* are the network agents responsible for delivering Proofs of Consumption data sets into the Liquidity Network. They are typically the service providers of the Makers, with whom they have a Service Level Agreement(SLA) that includes two main responsibilities
 1. Periodic economic payouts to Makers for ongoing consumption of their Assets
 2. Delivering the Proofs of Consumption on behalf of the Maker
@@ -132,7 +133,7 @@ Suppliers are the *trusted* entities that deliver the eventual remittance to the
 
 > Some examples of Suppliers are businesses that operate as  Video Hosting Service, Music Streaming Platform, E-Commerce Website, Gaming App Store, E-Book Store, PodCast Station etc. Amazon would be a supplier delivering the sales of products and YouTube a supplier delivering reports of monetized content views.
 
-### 3.1.4 Relayers
+#### 3.1.4 Relayers
 *Relayers* play an integral part in the Liquidity Network by aggregating Liquidity Orders issued by the Makers with the retail investors on the network. The order book is maintained in a centralized manner that provide the Takers the ability to browse through and fill orders. The filled order is then published on the Ethereum blockchain through Smart Contracts. An agreed upon fee is collected from the Taker to facilitate the trade.
 
 The other key function a Relayer plays on the network is to source the Proofs of Consumption from the Suppliers and Tokenize them to be represented as a Non-Fungible Liquidity Token. Relayers have the opportunity to leverage a business model by collection subscription fees in economy tokens T<sub>NFXC</sub> for these value added services.
@@ -148,7 +149,7 @@ The other key function a Relayer plays on the network is to source the Proofs of
 
 ##### Table 3.1.4.a: The matrix showing different actors, their roles and their incentives using the Non-Fungible Liquidity Protocol
 
-## 3.2 Primary Market Liquidity
+### 3.2 Primary Market Liquidity
 
 In the example below, an Asset Owner (Maker) and a Taker have negotiated and reached agreement to trade an order representing the tokenized Non-Fungible Assets which are the Proofs of Consumptions from a Service Provider. The Exchange Contract is an Ethereum smart contract that executes the functions. The general process is:
 
@@ -163,7 +164,7 @@ In the example below, an Asset Owner (Maker) and a Taker have negotiated and rea
 ![Primary Market](/primary_market.PNG)
 ##### Figure 3.2.a: Example of an order execution sequence between two peers.
 
-## 3.3 Secondary Markets
+### 3.3 Secondary Markets
 
 In the second scenario shown below, the initial Taker decides to resell the NFT on a secondary market, causing adjustment in ownership and IOU remittance. In a good Secondary Market scenario, the process is slightly altered:
 
@@ -180,13 +181,13 @@ In the second scenario shown below, the initial Taker decides to resell the NFT 
 ![Secondary Market](/dalp_nft_secondary_market.png)
 ##### Figure 3.3.a: Example of an order execution sequence with a secondary taker scenario.
 
-# 4) Specification
+## 4) Specification
 This section captures the specification of the off-chain relayer API that helps with order discovery among the peers and the mechanics of the Non-Fungible Exchange Smart Contract that interfaces with the Ethereum Blockchain.
 
-## 4.1 Relayer Order API
+### 4.1 Relayer Order API
 This API is hosted off-chain by the Relayer to maintain its order books. All endpoint requests assume that the `Content-Type: application/json` header is passed.
 
-### 4.1.1 POST /api/:version/orders
+#### 4.1.1 POST /api/:version/orders
 Creates and publishes a new order on the Relayer. The payload captures the Maker's signed intent to trade for the specified set of terms. On success, the endpoint would return an order Id. The order is signed with the Maker's Elliptic Curve Digital Signature Algorithm (ECDSA), which can be used to validate the origin and integrity of the order.
 
 ```js
@@ -228,7 +229,7 @@ The endpoint called by the Taker to fill a published order on the Relayer.
 }
 ``` -->
 
-### 4.1.2 POST /api/:version/orders/:orderId/cancel
+#### 4.1.2 POST /api/:version/orders/:orderId/cancel
 Called by the Maker to cancel the published order on the Relayer's order book
 
 ```js
@@ -243,7 +244,7 @@ Called by the Maker to cancel the published order on the Relayer's order book
 }
 ```
 
-### 4.1.3 GET /api/:version/orders/:orderId
+#### 4.1.3 GET /api/:version/orders/:orderId
 Fetches the order for the given orderId.
 
 ```js
@@ -264,12 +265,12 @@ Fetches the order for the given orderId.
 }
 ```
 
-## 4.2 Non-Fungible Exchange Contract
+### 4.2 Non-Fungible Exchange Contract
 The Non-Fungible Exchange Contract (NFXC) is the main smart contract that a Relayer interacts with to publish a filled signed order for the agreed upon terms amongst the Maker and the Taker. The contract also houses the functionality to trigger the repayment on the Liquidity Token from the supplier to the buyer.
 
 Upon deployment of the Exchange Contract, the contract addresses capturing the Relayer wallet for fees, the economy token T<sub>NFXC</sub> used for trade and the Liquidity Token T<sub>NFT</sub> are set.
 
-### 4.2.1 Liquidity Order
+#### 4.2.1 Liquidity Order
 A Liquidity Order is the atomic unit of trade that captures the Maker's contract terms and the Taker's intent to fill.
 
 An order has the following characteristics:
@@ -290,7 +291,7 @@ An order has the following characteristics:
 | *_r*              | `bytes32`               | 32 byte output of the Maker's ECDSA signature                                                       |
 | *_s*              | `bytes32`               | 32 byte output of the Maker's ECDSA signature                                                       |
 
-### 4.2.2 Contract Interface
+#### 4.2.2 Contract Interface
 
 ```
 js
@@ -342,9 +343,9 @@ interface IExchange {
 }
 ```
 
-## 4.3 Order Lifecycle
+### 4.3 Order Lifecycle
 
-### 4.3.1 Order Publishing & Discovery
+#### 4.3.1 Order Publishing & Discovery
 Makers publish their signed intent to trade on the Relayer's off-chain order books which makes it available for discovery for Takers browsing through. Order terms are set by the Maker and negotiated with the Taker. Since the Relayer is sourcing Proofs of Consumption from the supplier, `repaymentDueDate` is worked out in conjunction with the Supplier and served to Maker during the publishing phase. For the network services, Relayer specifies a `relayerFee` which is a deduction from the Maker's principal amount. Maker specifies the `returnFee` as the amount from the principal that they are willing to offer the Taker as return for filling the order.
 
 >Alice is the Maker that publishes an order with token amount 10,000 T<sub>NFXC</sub> on July 1st 2018, for which she is hoping to receive liquidity by the expiration July 28th 2018. She indicates that she expects the taker, Bob, would receive his funds by the expected remittance due date September 1st 2018.
@@ -356,7 +357,7 @@ Makers publish their signed intent to trade on the Relayer's off-chain order boo
 >
 >Should the order be filled by a Taker, Alice receives 97% of the original posted amount.
 
-### 4.3.2 Order Fills
+#### 4.3.2 Order Fills
 Takers browse through the order books of the Relayer to discover and fill the available orders from Makers. While this is facilitate by the `Relayer Order API`, the action of filling the order is executed through the Smart Contract method `fillOrder()`. The Smart Contract is designed to validate the Maker's identity through the ECDSA signature supplied in the request. Upon filling, the Smart Contract makes 3 token transfers
 * Transferring EIP20 economy tokens T<sub>NFXC</sub> that is the Relayer Fee to the Relayer Wallet
 * Transferring EIP20 economy tokens T<sub>NFXC</sub> that is the Liquidity Amount to the Maker
@@ -368,7 +369,7 @@ Takers browse through the order books of the Relayer to discover and fill the av
 >
 >From the 9750 T<sub>NFXC</sub>, 50 T<sub>NFXC</sub> is transferred to the Relayers’s wallet address as 0.5% relayer fee and the remaining 9700 T<sub>NFXC</sub> is transferred to Alice the maker as the Liquidity Amount.
 
-### 4.3.3 Repayment Remittance
+#### 4.3.3 Repayment Remittance
 
 Relayer and/or the Supplier will be authorized off-chain, by the maker Alice, to remit funds to Bob when her funds become available by the previously mentioned `repaymentDueDate`. The repayment remittance is accomplished using the `remitOrder()` function on the Smart Contract.
 
@@ -386,7 +387,7 @@ Relayer and/or the Supplier will be authorized off-chain, by the maker Alice, to
 
 ##### Table 4.3.3.a: Account state changes of an order’s lifecycle on the marketplace
 
-# 5) Token Utility
+## 5) Token Utility
 
 The economy token T<sub>NFXC</sub> is a multi-purpose EIP20 token that allows peers on DALP to transact and to use dApps or any integration services connected to it. Some of the additional uses of the token are:
 
@@ -397,7 +398,7 @@ The economy token T<sub>NFXC</sub> is a multi-purpose EIP20 token that allows pe
 
 A custom token in general allows for decoupling from the parent community (like Ethereum), opening up many more possibilities like customized contributions, reward mechanisms and implementing governance structures where or when necessary.
 
-# 6) NFXC Configuration and Extensibility
+## 6) NFXC Configuration and Extensibility
 
 While the contract mechanism outlined so far is in a simplistic form, the protocol itself allows for some exciting extensibility per the desired marketplace configuration:
 
@@ -409,7 +410,7 @@ While the contract mechanism outlined so far is in a simplistic form, the protoc
 * Prediction markets can be tied to the performance of the asset over time
 * Incentivizing Oracles to connect zero knowledge proof protocols to ascertain transaction data quality, as well as initiate price discovery modelling for data flows
 
-# 7) Summary
+## 7) Summary
 
 By adopting the Digital Asset Liquidity Protocol, we aim to provide a decentralized mechanism for peer-to-peer trading of tokenized non-fungible assets in primary and secondary markets. We can extend the core framework to include marketplace services to manage off-chain order books, address front-running issues and adopt prediction market mechanism and zero knowledge proof protocols to incentivize wider network adoption.
 

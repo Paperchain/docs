@@ -1,7 +1,7 @@
 
 # Digital Asset Liquidity Protocol
 
-Rahul Rumalla, Dave Tomaselli, & Daniel Dewar
+Rahul Rumalla, David Tomaselli, & Daniel Dewar
 
 Version 0.4 August 14th, 2018
 
